@@ -11,7 +11,6 @@ import time
 import dlib
 import cv2
  
- 
 def eye_aspect_ratio(eye):
     # 垂直眼标志（X，Y）坐标
     A = dist.euclidean(eye[1], eye[5])# 计算两个集合之间的欧式距离
@@ -23,7 +22,6 @@ def eye_aspect_ratio(eye):
     ear = (A + B) / (2.0 * C)
     # 返回眼睛的长宽比
     return ear
- 
  
 # 定义两个常数
 # 眼睛长宽比
@@ -39,7 +37,7 @@ print("[INFO] loading facial landmark predictor...")
 # 第一步：使用dlib.get_frontal_face_detector() 获得脸部位置检测器
 detector = dlib.get_frontal_face_detector()
 # 第二步：使用dlib.shape_predictor获得脸部特征位置检测器
-predictor = dlib.shape_predictor('D:/myworkspace/JupyterNotebook/fatigue_detecting/model/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('./model/shape_predictor_68_face_landmarks.dat')
  
 # 第三步：分别获取左右眼面部标志的索引
 (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]

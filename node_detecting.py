@@ -10,7 +10,7 @@ from imutils import face_utils
 """
 
 # 加载人脸检测和姿势估计模型（dlib）
-face_landmark_path = 'D:/myworkspace/JupyterNotebook/fatigue_detecting/model/shape_predictor_68_face_landmarks.dat'
+face_landmark_path = './model/shape_predictor_68_face_landmarks.dat'
 
 """
 只要知道世界坐标系内点的位置、像素坐标位置和相机参数就可以搞定旋转和平移矩阵(OpenCV自带函数solvePnp())
